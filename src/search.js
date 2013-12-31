@@ -60,6 +60,8 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             }
         }
         
-        return -1;
+        return (compare(item, array[array.length - 1]) === 1) 
+			? ~array.length 
+			: ~i;
     };
 }).call(this);

@@ -4,8 +4,16 @@ var should = require('should');
 
 describe('search', function(){
     describe('#binarySearch()', function(){
-        it('should return -1 when the value is not present', function(){
-            search.binarySearch([1,2,3], 5).should.equal(-1);
+        it('should return the bitwise complement of the index of the next element that is larger than item.', function(){
+            search.binarySearch([1,2,3,7,14], 5).should.equal(~3);
+        })
+    })
+})
+
+describe('search', function(){
+    describe('#binarySearch()', function(){
+        it('should return the bitwise complement of length if there is no element larger than item.', function(){
+            search.binarySearch([1,2,3,7,14,22], 78).should.equal(~6);
         })
     })
 })
